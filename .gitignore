@@ -90,3 +90,6 @@ Thumbs.db
 
 # Git
 .git/
+*.backup
+.env
+.env.local
