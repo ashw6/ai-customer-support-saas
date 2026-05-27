@@ -1,0 +1,92 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/venv/
+backend/.venv/
+venv/
+.venv/
+
+# Build / cache
+dist/
+frontend/dist/
+build/
+*.egg-info/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage/
+htmlcov/
+
+# Local vector DB
+chroma_db/
+backend/chroma_db/
+backend/.test_chroma/
+backend/*_chroma/
+backend/.test.db
+backend/*.db
+backend/*.sqlite
+
+# Environment and secrets (never commit real .env files)
+.env
+.env.local
+.env.*.local
+!.env.example
+backend/.env
+frontend/.env
+frontend/.env.local
+*.pem
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Vite
+frontend/.vite/
+
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Build folders
+build/
+dist/
+.next/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+*.pyc
+
+# Cursor
+.cursor/
+
+# Git
+.git/

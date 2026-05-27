@@ -1,0 +1,68 @@
+# Render Blueprint - set environment variables in the Render dashboard (secrets).
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: ai-support-api
+    runtime: python
+    region: oregon
+    rootDir: backend
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    preDeployCommand: python -m alembic upgrade head
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT --proxy-headers
+    healthCheckPath: /health
+    disk:
+      name: chroma-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.8"
+      - key: ENVIRONMENT
+        value: production
+      - key: LOG_LEVEL
+        value: INFO
+      - key: SKIP_HEALTH_ACCESS_LOG
+        value: "true"
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: AI_PROVIDER
+        value: openai
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_CHAT_MODEL
+        value: gpt-4o-mini
+      - key: OPENAI_EMBEDDING_MODEL
+        value: text-embedding-3-small
+      - key: AI_CHAT_FALLBACK_ONLY
+        value: "false"
+      - key: AI_CHAT_FALLBACK_ENABLED
+        value: "false"
+      - key: CHROMA_DB_DIR
+        value: /var/data/chroma_db
+      - key: RESEND_API_KEY
+        sync: false
+        optional: true
+      - key: RESEND_FROM_EMAIL
+        sync: false
+        optional: true
+      - key: SMTP_HOST
+        sync: false
+        optional: true
+      - key: SMTP_PORT
+        sync: false
+        optional: true
+      - key: SMTP_USER
+        sync: false
+        optional: true
+      - key: SMTP_PASSWORD
+        sync: false
+        optional: true
+      - key: SMTP_FROM_EMAIL
+        sync: false
+        optional: true
