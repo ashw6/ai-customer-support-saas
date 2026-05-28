@@ -28,9 +28,9 @@ services:
       - key: JWT_SECRET
         sync: false
       - key: CORS_ORIGINS
-        sync: false
+        value: https://ai-customer-support-saas-rho.vercel.app
       - key: FRONTEND_URL
-        sync: false
+        value: https://ai-customer-support-saas-rho.vercel.app
       - key: AI_PROVIDER
         value: openai
       - key: OPENAI_API_KEY

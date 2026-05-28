@@ -23,8 +23,8 @@ def update_env_file():
     # New production-ready .env.local content
     new_env_content = """# Public API base (no trailing slash)
 # For local development: http://127.0.0.1:8000
-# For production: https://your-backend.onrender.com
-VITE_API_URL=http://127.0.0.1:8000
+# For production: https://ai-customer-support-saas-ann0.onrender.com
+VITE_API_URL=https://ai-customer-support-saas-ann0.onrender.com
 
 # Axios timeout (milliseconds) - general API calls
 VITE_API_TIMEOUT_MS=90000
@@ -39,9 +39,8 @@ VITE_CHAT_TIMEOUT_MS=180000
     
     print(f"✅ Updated .env.local with configuration")
     print(f"\n⚠️  MANUAL STEPS REQUIRED:")
-    print(f"1. For local development: Keep VITE_API_URL=http://127.0.0.1:8000")
-    print(f"2. For production: Change VITE_API_URL=https://your-backend.onrender.com")
-    print(f"3. After deploying backend, update this file with the actual backend URL")
+    print(f"1. Production backend: VITE_API_URL=https://ai-customer-support-saas-ann0.onrender.com")
+    print(f"2. For local development: Change VITE_API_URL=http://127.0.0.1:8000")
 
 if __name__ == "__main__":
     update_env_file()

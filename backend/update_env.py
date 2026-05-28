@@ -38,11 +38,11 @@ JWT_ALGORITHM=HS256
 JWT_EXPIRE_MINUTES=30
 REFRESH_TOKEN_EXPIRE_DAYS=7
 
-# REPLACE WITH YOUR ACTUAL FRONTEND URL
-CORS_ORIGINS=https://your-app.vercel.app
+# Public frontend URL
+CORS_ORIGINS=https://ai-customer-support-saas-rho.vercel.app
 
-# REPLACE WITH YOUR ACTUAL FRONTEND URL
-FRONTEND_URL=https://your-app.vercel.app
+# Public frontend URL
+FRONTEND_URL=https://ai-customer-support-saas-rho.vercel.app
 
 # Logging
 LOG_LEVEL=INFO
@@ -97,8 +97,8 @@ PASSWORD_RESET_EXPIRE_MINUTES=15
     print(f"✅ Updated .env with production-ready configuration")
     print(f"✅ New JWT_SECRET: {new_jwt_secret}")
     print(f"\n⚠️  MANUAL STEPS REQUIRED:")
-    print(f"1. Update CORS_ORIGINS to your frontend URL")
-    print(f"2. Update FRONTEND_URL to your frontend URL")
+    print(f"1. CORS_ORIGINS is set to https://ai-customer-support-saas-rho.vercel.app")
+    print(f"2. FRONTEND_URL is set to https://ai-customer-support-saas-rho.vercel.app")
     print(f"3. Update OLLAMA_* URLs to your hosted Ollama endpoint")
     print(f"4. Update RESEND_API_KEY with your actual Resend API key")
     print(f"5. For local development, set ENVIRONMENT=development")

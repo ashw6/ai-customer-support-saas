@@ -21,11 +21,11 @@ JWT_ALGORITHM=HS256
 JWT_EXPIRE_MINUTES=30
 REFRESH_TOKEN_EXPIRE_DAYS=7
 
-# REPLACE WITH YOUR ACTUAL FRONTEND URL
-CORS_ORIGINS=https://your-app.vercel.app
+# Public frontend URL
+CORS_ORIGINS=https://ai-customer-support-saas-rho.vercel.app
 
-# REPLACE WITH YOUR ACTUAL FRONTEND URL
-FRONTEND_URL=https://your-app.vercel.app
+# Public frontend URL
+FRONTEND_URL=https://ai-customer-support-saas-rho.vercel.app
 
 # Logging
 LOG_LEVEL=INFO
@@ -108,8 +108,8 @@ Create or update `frontend/.env.local`:
 # For local development
 VITE_API_URL=http://127.0.0.1:8000
 
-# For production (after deployment)
-# VITE_API_URL=https://your-backend.onrender.com
+# For production
+VITE_API_URL=https://ai-customer-support-saas-ann0.onrender.com
 
 VITE_API_TIMEOUT_MS=90000
 VITE_CHAT_TIMEOUT_MS=180000
@@ -132,19 +132,19 @@ VITE_CHAT_TIMEOUT_MS=180000
 1. Push your code to GitHub
 2. Go to https://vercel.com/
 3. Import your repository
-4. Set environment variable: `VITE_API_URL=https://your-backend.onrender.com`
+4. Set environment variable: `VITE_API_URL=https://ai-customer-support-saas-ann0.onrender.com`
 5. Deploy
 
 ### 7. Update URLs in Backend .env
 
 After deployment:
-1. Get your Render backend URL (e.g., `https://your-api.onrender.com`)
-2. Get your Vercel frontend URL (e.g., `https://your-app.vercel.app`)
+1. Render backend URL: `https://ai-customer-support-saas-ann0.onrender.com`
+2. Vercel frontend URL: `https://ai-customer-support-saas-rho.vercel.app`
 3. Update backend .env:
-   - `CORS_ORIGINS=https://your-app.vercel.app`
-   - `FRONTEND_URL=https://your-app.vercel.app`
+   - `CORS_ORIGINS=https://ai-customer-support-saas-rho.vercel.app`
+   - `FRONTEND_URL=https://ai-customer-support-saas-rho.vercel.app`
 4. Update frontend .env.local:
-   - `VITE_API_URL=https://your-api.onrender.com`
+   - `VITE_API_URL=https://ai-customer-support-saas-ann0.onrender.com`
 5. Redeploy both services
 
 ## Quick Start for Local Development
