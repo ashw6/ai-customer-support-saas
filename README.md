@@ -34,9 +34,9 @@ Businesses have FAQs, policy docs, support tickets, and sales leads scattered ac
 
 <table>
   <tr>
-    <td><img src="C:\AI Customer Support & Sales Agent SaaS application\docs\screenshots\Screenshot 2026-05-28 090759.png" alt="Login screen - Customer mode" width="100%"/></td>
-    <td><img src="docs/screenshots/Screenshot_2026-05-28_090810.png" alt="Login screen - Admin mode" width="100%"/></td>
-    <td><img src="docs/screenshots/Screenshot_2026-05-28_090830.png" alt="Register screen" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_090759.png" alt="Login screen - Customer mode" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_090810.png" alt="Login screen - Admin mode" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_090830.png" alt="Register screen" width="100%"/></td>
   </tr>
   <tr>
     <td align="center"><em>Customer login</em></td>
@@ -47,7 +47,7 @@ Businesses have FAQs, policy docs, support tickets, and sales leads scattered ac
 
 <table>
   <tr>
-    <td align="center"><img src="docs/screenshots/Screenshot_2026-05-28_090844.png" alt="Password reset flow" width="60%"/></td>
+    <td align="center"><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_090844.png" alt="Password reset flow" width="60%"/></td>
   </tr>
   <tr>
     <td align="center"><em>Password reset with email confirmation toast</em></td>
@@ -62,8 +62,8 @@ Businesses have FAQs, policy docs, support tickets, and sales leads scattered ac
 
 <table>
   <tr>
-    <td><img src="docs/screenshots/Screenshot_2026-05-28_091023.png" alt="AI chat - pricing query" width="100%"/></td>
-    <td><img src="docs/screenshots/Screenshot_2026-05-28_091039.png" alt="AI chat - internship query" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_091023.png" alt="AI chat - pricing query" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_091039.png" alt="AI chat - internship query" width="100%"/></td>
   </tr>
   <tr>
     <td align="center"><em>"How does your pricing work?" — answered from uploaded PDF</em></td>
@@ -79,8 +79,8 @@ Businesses have FAQs, policy docs, support tickets, and sales leads scattered ac
 
 <table>
   <tr>
-    <td><img src="docs/screenshots/Screenshot_2026-05-28_091058.png" alt="Admin dashboard - top KPIs" width="100%"/></td>
-    <td><img src="docs/screenshots/Screenshot_2026-05-28_091206.png" alt="Admin dashboard - charts" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_091058.png" alt="Admin dashboard - top KPIs" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_091206.png" alt="Admin dashboard - charts" width="100%"/></td>
   </tr>
   <tr>
     <td align="center"><em>KPIs: unique customers, escalations, open pipeline</em></td>
@@ -96,8 +96,8 @@ Businesses have FAQs, policy docs, support tickets, and sales leads scattered ac
 
 <table>
   <tr>
-    <td><img src="docs/screenshots/Screenshot_2026-05-28_091228.png" alt="Ticket list with filters" width="100%"/></td>
-    <td><img src="docs/screenshots/Screenshot_2026-05-28_092046.png" alt="Ticket detail view" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_091228.png" alt="Ticket list with filters" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_092046.png" alt="Ticket detail view" width="100%"/></td>
   </tr>
   <tr>
     <td align="center"><em>Ticket list — filterable by status, priority, sentiment, agent</em></td>
@@ -113,8 +113,8 @@ Businesses have FAQs, policy docs, support tickets, and sales leads scattered ac
 
 <table>
   <tr>
-    <td><img src="docs/screenshots/Screenshot_2026-05-28_090905.png" alt="Documents page - full view" width="100%"/></td>
-    <td><img src="docs/screenshots/Screenshot_2026-05-28_090924.png" alt="Documents page - upload zone" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_090905.png" alt="Documents page - full view" width="100%"/></td>
+    <td><img src="https://raw.githubusercontent.com/ashw6/ai-customer-support-saas/main/docs/screenshots/Screenshot_2026-05-28_090924.png" alt="Documents page - upload zone" width="100%"/></td>
   </tr>
   <tr>
     <td align="center"><em>3 indexed docs · 5 chunks · 2,399 extracted characters</em></td>
