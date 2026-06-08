@@ -1,335 +1,270 @@
-# AI Customer Support & Sales Agent
+<div align="center">
 
-A production-minded full-stack SaaS MVP for AI-assisted customer support, document-grounded chat, ticket management, and lead capture.
+# 🤖 AI Customer Support & Sales Agent
 
-This project is built as a portfolio and client-demo application: a React dashboard for customers, support agents, and admins backed by a FastAPI API, PostgreSQL persistence, ChromaDB vector search, and Ollama-powered RAG workflows.
+### A production-ready SaaS platform that answers from your PDFs, manages support tickets, and captures leads — powered by RAG + LLMs.
 
-## What It Solves
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Visit_App-4F46E5?style=for-the-badge)](https://ai-customer-support-saas-rho.vercel.app)
+[![Demo Video](https://img.shields.io/badge/🎬_Demo_Video-Watch_Now-E11D48?style=for-the-badge)](https://ai-customer-support-saas-rho.vercel.app)
+[![Tech Stack](https://img.shields.io/badge/Stack-FastAPI_+_React_+_RAG-0EA5E9?style=for-the-badge)](#tech-stack)
 
-Businesses often have product FAQs, policy PDFs, support tickets, and sales leads spread across disconnected tools. This app brings the core workflow into one system:
+> **Built for freelance & client demos.** Drop in your PDFs, get an AI that answers customer questions from them — with citations, ticket management, analytics, and lead capture included.
 
-- Customers can register, open tickets, and chat with an AI assistant.
-- The assistant can answer from staff/admin uploaded documents and return source citations.
-- Support teams can manage and filter tickets.
-- Admins can view analytics, uploaded documents, and captured leads.
-- Optional email automation supports welcome, password reset, and lead follow-up flows.
+</div>
 
-## Highlights
+---
 
-- JWT authentication with register, login, current-user, forgot-password, and reset-password flows
-- Role-based access for customer, support agent, and admin workflows
-- Ticket creation, listing, filtering, pagination, and detail pages
-- AI chat with conversation history and document-grounded RAG citations
-- Staff/admin PDF ingestion with ChromaDB-backed vector search
-- Lead capture from chat intent and admin lead analytics
-- Optional Resend/Gmail email delivery with graceful failure handling
-- Alembic database migrations for PostgreSQL
-- Structured logging, request IDs, centralized JSON error responses, and production config validation
-- Tested frontend and backend paths with reproducible verification commands
+## ✨ What It Does
 
-## Tech Stack
+Businesses have FAQs, policy docs, support tickets, and sales leads scattered across disconnected tools. This app brings the core workflow into one system:
+
+| Role | Capabilities |
+|------|-------------|
+| 🧑‍💼 **Customer** | Register, open tickets, chat with the AI assistant |
+| 🛠️ **Support Agent** | View, filter, and manage tickets across the pipeline |
+| 👑 **Admin / Owner** | Analytics dashboard, PDF ingestion, lead tracking, email automation |
+
+---
+
+## 📸 Screenshots
+
+### 🔐 Authentication — Role-based Login & Registration
+
+> Clean login UI with Customer / Admin role switching and one-click demo logins.
+
+<table>
+  <tr>
+    <td><img src="C:\AI Customer Support & Sales Agent SaaS application\docs\screenshots\Screenshot 2026-05-28 090759.png" alt="Login screen - Customer mode" width="100%"/></td>
+    <td><img src="docs/screenshots/Screenshot_2026-05-28_090810.png" alt="Login screen - Admin mode" width="100%"/></td>
+    <td><img src="docs/screenshots/Screenshot_2026-05-28_090830.png" alt="Register screen" width="100%"/></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Customer login</em></td>
+    <td align="center"><em>Admin login</em></td>
+    <td align="center"><em>Account registration</em></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/screenshots/Screenshot_2026-05-28_090844.png" alt="Password reset flow" width="60%"/></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Password reset with email confirmation toast</em></td>
+  </tr>
+</table>
+
+---
+
+### 💬 RAG-Powered AI Chat
+
+> The AI answers directly from your uploaded PDFs — with source citations, conversation history, and persistent threads.
+
+<table>
+  <tr>
+    <td><img src="docs/screenshots/Screenshot_2026-05-28_091023.png" alt="AI chat - pricing query" width="100%"/></td>
+    <td><img src="docs/screenshots/Screenshot_2026-05-28_091039.png" alt="AI chat - internship query" width="100%"/></td>
+  </tr>
+  <tr>
+    <td align="center"><em>"How does your pricing work?" — answered from uploaded PDF</em></td>
+    <td align="center"><em>"Does the company offer internships?" — grounded in knowledge base</em></td>
+  </tr>
+</table>
+
+---
+
+### 📊 Admin Analytics Dashboard
+
+> Real-time operations snapshot: ticket trends, priority heatmaps, sentiment distribution, lead pipeline, and email stats.
+
+<table>
+  <tr>
+    <td><img src="docs/screenshots/Screenshot_2026-05-28_091058.png" alt="Admin dashboard - top KPIs" width="100%"/></td>
+    <td><img src="docs/screenshots/Screenshot_2026-05-28_091206.png" alt="Admin dashboard - charts" width="100%"/></td>
+  </tr>
+  <tr>
+    <td align="center"><em>KPIs: unique customers, escalations, open pipeline</em></td>
+    <td align="center"><em>Ticket status, priority, sentiment + lead analytics</em></td>
+  </tr>
+</table>
+
+---
+
+### 🎫 Ticket Management
+
+> Full ticket lifecycle — filtered list view with pagination, and a detailed view showing status, priority, sentiment, SLA tag, and agent assignment.
+
+<table>
+  <tr>
+    <td><img src="docs/screenshots/Screenshot_2026-05-28_091228.png" alt="Ticket list with filters" width="100%"/></td>
+    <td><img src="docs/screenshots/Screenshot_2026-05-28_092046.png" alt="Ticket detail view" width="100%"/></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Ticket list — filterable by status, priority, sentiment, agent</em></td>
+    <td align="center"><em>Ticket detail — status, urgency score, SLA tag, category</em></td>
+  </tr>
+</table>
+
+---
+
+### 📄 PDF Knowledge Base (RAG Ingestion)
+
+> Admins upload PDFs that are automatically chunked, embedded, and indexed into ChromaDB for retrieval-augmented generation.
+
+<table>
+  <tr>
+    <td><img src="docs/screenshots/Screenshot_2026-05-28_090905.png" alt="Documents page - full view" width="100%"/></td>
+    <td><img src="docs/screenshots/Screenshot_2026-05-28_090924.png" alt="Documents page - upload zone" width="100%"/></td>
+  </tr>
+  <tr>
+    <td align="center"><em>3 indexed docs · 5 chunks · 2,399 extracted characters</em></td>
+    <td align="center"><em>Drag-and-drop PDF upload → auto-chunked & embedded</em></td>
+  </tr>
+</table>
+
+---
+
+## 🏗️ Architecture
+
+```
+Browser (React + Vite + Tailwind)
+        │
+        │  REST / JSON
+        ▼
+FastAPI Backend
+        ├── PostgreSQL      → users, tickets, conversations, leads
+        ├── ChromaDB        → vector index for RAG retrieval
+        ├── AI Provider     → Ollama (local) or OpenAI-compatible API
+        └── Resend / SMTP   → transactional email (optional)
+```
+
+---
+
+## 🛠️ Tech Stack
 
 | Layer | Technology |
-| --- | --- |
-| Frontend | React 19, TypeScript, Vite, Tailwind CSS, React Router, Axios, Recharts |
-| Backend | FastAPI, SQLAlchemy, Alembic, Pydantic, python-jose, passlib |
-| Database | PostgreSQL, compatible with Supabase connection strings |
-| AI / RAG | Ollama or OpenAI-compatible chat/embeddings, ChromaDB, pypdf |
-| Email | Resend API or Gmail SMTP fallback |
-| Testing | Vitest, React Testing Library, Pytest |
-| Deployment files | Vercel config for frontend, Render blueprint for backend |
+|-------|------------|
+| **Frontend** | React 19, TypeScript, Vite, Tailwind CSS, React Router, Axios, Recharts |
+| **Backend** | FastAPI, SQLAlchemy, Alembic, Pydantic, python-jose, passlib |
+| **Database** | PostgreSQL (Supabase-compatible) |
+| **AI / RAG** | ChromaDB · pypdf · Ollama or OpenAI-compatible embeddings + chat |
+| **Email** | Resend API · Gmail SMTP fallback |
+| **Testing** | Pytest (17 passing) · Vitest + React Testing Library (4 passing) |
+| **Deploy** | Vercel (frontend) · Render (backend via `render.yaml`) |
 
-## Architecture
+---
 
-```text
-Browser: React + Vite + Tailwind
-  |
-  | HTTPS / JSON through VITE_API_URL
-  v
-FastAPI backend
-  |
-  +-- PostgreSQL: users, tickets, conversations, documents, leads
-  +-- ChromaDB: persisted vector index
-  +-- AI provider: local/hosted Ollama or OpenAI-compatible API
-  +-- Resend / SMTP: optional transactional email
-```
-
-The frontend talks to the backend over REST. The backend owns authentication, role checks, persistence, email orchestration, document ingestion, retrieval, and AI response generation.
-
-## Repository Layout
-
-```text
-.
-|-- backend/
-|   |-- ai/                 # RAG, PDF parsing, embeddings, Ollama, ChromaDB
-|   |-- alembic/            # Database migrations
-|   |-- database/           # SQLAlchemy engine and sessions
-|   |-- middleware/         # Request ID and HTTP logging
-|   |-- models/             # ORM models
-|   |-- routes/             # API routers
-|   |-- schemas/            # Pydantic schemas
-|   |-- services/           # Service integrations
-|   |-- tests/              # Backend tests
-|   |-- utils/              # Auth, email, dependencies, exception handling
-|   |-- main.py             # FastAPI app setup
-|   |-- settings.py         # Environment settings and production validation
-|   |-- requirements.txt
-|   `-- requirements-dev.txt
-|-- frontend/
-|   |-- src/
-|   |-- package.json
-|   |-- vercel.json
-|   `-- vite.config.ts
-|-- docs/
-|   |-- PORTFOLIO_CASE_STUDY.md
-|   |-- PRODUCTION_READINESS.md
-|   |-- UPWORK_CLIENT_OFFER.md
-|   `-- screenshots/
-|-- render.yaml
-|-- .env.example
-|-- .gitignore
-`-- README.md
-```
-
-## Local Setup
+## 🚀 Quick Start
 
 ### Prerequisites
+- Node.js 20+, Python 3.12+, PostgreSQL
+- Ollama (local dev) or an OpenAI-compatible API key
 
-- Node.js 20+
-- Python 3.12+ recommended
-- PostgreSQL
-- Ollama installed locally for chat and embeddings
-
-### 1. Backend Environment
-
+### 1. Backend
 ```bash
 cd backend
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-pip install -r requirements-dev.txt
+python -m venv .venv && .venv\Scripts\activate
+pip install -r requirements.txt -r requirements-dev.txt
 copy .env.example .env
-```
-
-Edit `backend/.env` and set at least:
-
-```text
-DATABASE_URL=postgresql://...
-JWT_SECRET=replace-with-a-long-random-secret-min-32-chars
-```
-
-Run migrations:
-
-```bash
+# Set DATABASE_URL and JWT_SECRET in .env
 alembic upgrade head
-```
-
-Create local demo logins:
-
-```bash
 python scripts/seed_demo_users.py
-```
-
-Demo accounts:
-
-| Role | Email | Password |
-| --- | --- | --- |
-| Customer / client | `customer@example.com` | `Customer123` |
-| Company owner | `owner@example.com` | `Owner12345` |
-| Support agent | `support@example.com` | `Support123` |
-
-Start the API:
-
-```bash
 uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-Health check:
-
-```text
-GET http://127.0.0.1:8000/health
-```
-
 ### 2. AI Provider
+```bash
+# Local (Ollama)
+ollama pull mistral && ollama pull nomic-embed-text && ollama serve
 
-For production AI without managing GPU hosting, use an OpenAI-compatible provider:
-
-```text
+# Or use OpenAI-compatible API
 AI_PROVIDER=openai
-OPENAI_API_KEY=...
+OPENAI_API_KEY=your-key
 OPENAI_CHAT_MODEL=gpt-4o-mini
 OPENAI_EMBEDDING_MODEL=text-embedding-3-small
 ```
 
-For local development, Ollama is still the default.
-
-The default local setup expects:
-
-```bash
-ollama pull mistral
-ollama pull nomic-embed-text
-ollama serve
-```
-
-Make sure the `OLLAMA_GENERATE_URL` and `OLLAMA_EMBEDDINGS_URL` values in `backend/.env` match your Ollama host.
-
-For local demos, `AI_CHAT_FALLBACK_ENABLED=true` lets chat return a basic support reply when Ollama is not running. Set `AI_CHAT_FALLBACK_ONLY=true` when you want instant demo replies without waiting for Ollama. For true RAG answers with uploaded-document citations, set `AI_CHAT_FALLBACK_ONLY=false`, keep Ollama running, and upload PDFs from the company-owner account.
-
-### 3. Frontend Environment
-
+### 3. Frontend
 ```bash
 cd frontend
 npm install
 copy .env.example .env.local
+# Set VITE_API_URL=http://127.0.0.1:8000
 npm run dev
+# Opens at http://localhost:5173
 ```
 
-Set:
+### Demo Accounts
 
-```text
-VITE_API_URL=http://127.0.0.1:8000
-```
+| Role | Email | Password |
+|------|-------|----------|
+| Customer | `customer@example.com` | `Customer123` |
+| Company Owner | `owner@example.com` | `Owner12345` |
+| Support Agent | `support@example.com` | `Support123` |
 
-Open the Vite URL, usually `http://localhost:5173`.
+---
 
-## Environment Variables
-
-### Backend
-
-| Variable | Purpose |
-| --- | --- |
-| `ENVIRONMENT` | `development` or `production`; production enables stricter startup checks |
-| `DATABASE_URL` | PostgreSQL connection string |
-| `JWT_SECRET` | JWT signing secret; use at least 32 random characters in production |
-| `CORS_ORIGINS` | Comma-separated allowed frontend origins |
-| `FRONTEND_URL` | Used in password reset links |
-| `AI_PROVIDER` | `ollama` or `openai` |
-| `OLLAMA_GENERATE_URL` | Ollama generation endpoint |
-| `OLLAMA_EMBEDDINGS_URL` | Ollama embeddings endpoint |
-| `OLLAMA_CHAT_MODEL` | Chat model name |
-| `OLLAMA_EMBEDDING_MODEL` | Embedding model name |
-| `OPENAI_API_KEY` | Required when `AI_PROVIDER=openai` |
-| `OPENAI_CHAT_MODEL` | OpenAI-compatible chat model |
-| `OPENAI_EMBEDDING_MODEL` | OpenAI-compatible embedding model |
-| `CHROMA_DB_DIR` | ChromaDB persistence directory |
-| `CHROMA_COLLECTION` | ChromaDB collection name |
-| `RESEND_API_KEY` | Optional Resend email API key |
-| `RESEND_FROM_EMAIL` | Optional verified sender address |
-| `SMTP_*` | Optional Gmail SMTP fallback settings |
-| `LOG_LEVEL` | Application log level |
-| `SKIP_HEALTH_ACCESS_LOG` | Reduces health-check log noise |
-
-### Frontend
-
-| Variable | Purpose |
-| --- | --- |
-| `VITE_API_URL` | Backend base URL with no trailing slash |
-| `VITE_API_TIMEOUT_MS` | Axios timeout in milliseconds; use `90000` locally for Ollama |
-
-## API Overview
-
-Base URL: `http://127.0.0.1:8000` locally.
-
-Authenticated routes expect:
-
-```text
-Authorization: Bearer <access_token>
-```
-
-| Area | Routes |
-| --- | --- |
-| Auth | `/auth/register`, `/auth/login`, `/auth/me`, `/auth/forgot-password`, `/auth/reset-password` |
-| Tickets | `/tickets`, `/tickets/my`, `/tickets/{id}` |
-| Chat | `/chat/send`, `/chat/history`, `/chat/conversation/{id}` |
-| Documents | `/documents/*` |
-| Leads | `/leads`, `/leads/analytics` |
-| Role dashboards | `/api/admin/dashboard`, `/api/support/tickets`, role-gated examples |
-| Health | `/health` |
-
-Interactive API docs are available at `/docs` while the backend is running.
-
-## Verification
-
-Run these before sharing the project with recruiters or clients:
+## ✅ Verified Test Status
 
 ```bash
-cd backend
-.venv\Scripts\activate
-python -m pytest tests
+# Backend — 17 passing
+cd backend && python -m pytest tests
+
+# Frontend — 4 passing + production build
+cd frontend && npm test && npm run build
 ```
 
-```bash
-cd frontend
-npm test
-npm run build
+---
+
+## 🏭 Production Readiness
+
+- ✅ JWT auth with forgot/reset password flows
+- ✅ Role-based access control (customer / agent / admin)
+- ✅ Production startup validation (requires `DATABASE_URL`, `JWT_SECRET`, non-localhost CORS)
+- ✅ Global exception handlers with consistent JSON error responses
+- ✅ `X-Request-ID` headers on all responses for tracing
+- ✅ Graceful AI/email failure handling — errors return clean API messages, never crash the process
+- ✅ Alembic migrations for zero-downtime schema updates
+- ✅ Structured logging with configurable log level
+
+See [`docs/PRODUCTION_READINESS.md`](docs/PRODUCTION_READINESS.md) for the full checklist.
+
+---
+
+## 📁 Repository Layout
+
+```
+.
+├── backend/
+│   ├── ai/          # RAG pipeline, PDF parsing, embeddings, ChromaDB
+│   ├── alembic/     # Database migrations
+│   ├── models/      # SQLAlchemy ORM models
+│   ├── routes/      # API routers (auth, tickets, chat, docs, leads)
+│   ├── schemas/     # Pydantic schemas
+│   ├── services/    # Email, AI provider integrations
+│   └── tests/       # Pytest suite (17 passing)
+├── frontend/
+│   └── src/         # React 19 + TypeScript app
+├── docs/
+│   ├── PORTFOLIO_CASE_STUDY.md
+│   ├── PRODUCTION_READINESS.md
+│   ├── UPWORK_CLIENT_OFFER.md
+│   └── screenshots/
+├── render.yaml      # One-click Render deploy
+└── .env.example
 ```
 
-Current verified status:
+---
 
-- Backend tests: 17 passing
-- Frontend tests: 4 passing
-- Frontend production build: passing
+## 🎯 Portfolio Positioning
 
-## Production Readiness Notes
+> **Built a full-stack AI support SaaS** with role-based dashboards, ticket workflows, PDF-grounded chat with citations, lead capture, email automation, and production validation — deployed and live.
 
-Implemented safeguards:
+- [`docs/PORTFOLIO_CASE_STUDY.md`](docs/PORTFOLIO_CASE_STUDY.md) — resume bullets, interview talking points, project narrative
+- [`docs/UPWORK_CLIENT_OFFER.md`](docs/UPWORK_CLIENT_OFFER.md) — first-client offer, proposal template, package structure
 
-- Production startup validation requires `DATABASE_URL`, `JWT_SECRET`, and explicit non-localhost CORS origins.
-- CORS is configured from environment variables.
-- Global exception handlers return consistent JSON errors.
-- Responses expose `X-Request-ID` for debugging.
-- Email delivery degrades gracefully when providers are not configured or fail.
-- RAG/Ollama failures return clear API errors instead of crashing the process.
-- Build and test commands are documented for repeatable handoff.
+---
 
-See [docs/PRODUCTION_READINESS.md](docs/PRODUCTION_READINESS.md) for the checklist.
+## 📜 License
 
-## Portfolio Positioning
-
-Use this as a case-study project, not just a code dump. Suggested headline:
-
-> Built a full-stack AI support SaaS with role-based dashboards, ticket workflows, PDF-grounded chat, lead capture, email automation, and production validation.
-
-See [docs/PORTFOLIO_CASE_STUDY.md](docs/PORTFOLIO_CASE_STUDY.md) for resume bullets, interview talking points, and a project narrative.
-
-## Upwork Positioning
-
-Suggested service title:
-
-> I will build an AI customer support chatbot trained on your PDFs, FAQs, and support docs.
-
-See [docs/UPWORK_CLIENT_OFFER.md](docs/UPWORK_CLIENT_OFFER.md) for a first-client offer, proposal template, package structure, and delivery checklist.
-
-## Demo Data
-
-This repository does not ship shared demo accounts. For a demo:
-
-1. Run migrations.
-2. Register a user through the UI or `/auth/register`.
-3. Assign support/admin roles in the database as needed.
-4. Upload one or more product/support PDFs as a support agent or admin.
-5. Create example tickets and chat conversations.
-
-## Scripts
-
-| Location | Command | Purpose |
-| --- | --- | --- |
-| `frontend/` | `npm run dev` | Start Vite dev server |
-| `frontend/` | `npm run typecheck` | Run TypeScript checks |
-| `frontend/` | `npm run build` | Create production frontend build |
-| `frontend/` | `npm test` | Run frontend tests |
-| `backend/` | `uvicorn main:app --reload` | Start backend dev server |
-| `backend/` | `python -m pytest tests` | Run backend tests |
-| `backend/` | `alembic upgrade head` | Apply database migrations |
-
-## Security Checklist Before Public Sharing
-
-- Do not commit `.env`, `.env.local`, virtual environments, `node_modules`, `dist`, `chroma_db`, caches, or generated bytecode.
-- Use a fresh random `JWT_SECRET` for every environment.
-- Use HTTPS frontend origins in production `CORS_ORIGINS`.
-- Rotate any keys that were ever exposed locally or in screenshots.
-- Remove personal emails, local database credentials, and test secrets before publishing.
-
-## License
-
-Use and adapt for learning, portfolio, and client-demo purposes. Replace branding, domains, demo data, and secrets before any real production use.
+Use and adapt for learning, portfolio, and client-demo purposes. Replace branding, domains, demo data, and secrets before any real production deployment.
